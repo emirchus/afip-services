@@ -17,8 +17,9 @@
 	},
 	"scripts": {
 		"start": "node server.js",
+		"start:debug": "nodemon server.js",
 		"debug": "nodemon --inspect=5858 server.js",
-		"dev": "HOMO=true node server.js"
+		"dev": "HOMO=true nodemon server.js"
 	},
 	"devDependencies": {
 		"nodemon": "1.19.1"

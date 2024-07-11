@@ -4,7 +4,7 @@ const afip_urls = {
 		service: 'https://wswhomo.afip.gov.ar/{service}/service.asmx?wsdl' //wsfev1
 	},
 	PROD: {
-		wsaa: 'https://wsaa.afip.gov.ar/ws/services/LoginCms?wsdl',
+		wsaa: 'https://wsaa.afip.gov.ar/ws/services/LoginCms?WSDL',
 		service: 'https://servicios1.afip.gov.ar/{service}/service.asmx?WSDL' //wsfev1
 	}
 };

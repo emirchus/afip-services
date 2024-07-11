@@ -1,11 +1,7 @@
-const restana = require('restana'),
-	path = require('path'),
-	index = require('./routes/index');
-	
-global.keys = {
-	private: path.join(__dirname, 'keys', 'afip.key'),
-	public: path.join(__dirname, 'keys', 'afip.pem')
-};
+const restana = require("restana"),
+	path = require("path"),
+	index = require("./routes/index");
+
 (async function () {
 	// Lets create Restana
 	// This is the HTTP Version check next links to upgrde to HTTPS or even HTTP/2
@@ -16,10 +12,11 @@ global.keys = {
 	// Start Routes
 	index(app, false);
 
+	console.log("process.env.PORT", process.env.PORT);
+
 	await app.start(process.env.PORT || 3000);
 
 	console.log(
-		"AFIP API Corriendo en el puerto " +
-			(process.env.PORT || 3000)
+		"AFIP API Corriendo en el puerto " + (process.env.PORT || 3000)
 	);
-})()
+})();
