@@ -146,6 +146,7 @@ class Tokens {
 						}, (err, result, raw, soapHeader) => {
 							this.parseXML(raw).then((res) => {
 								//console.info(res.envelope.body);
+								console.log(res.envelope.body);
 								var xml_response = res.envelope.body.logincmsresponse.logincmsreturn;
 
 								if (xml_response) {
