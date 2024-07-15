@@ -27,6 +27,8 @@ function sign(options) {
 		if (!options.cert)
 			reject('Invalid certificate.');
 
+		console.info('cert:', options.cert);
+
 		var command = util.format(
 			'openssl smime -sign -signer %s -inkey %s -outform DER -nodetach',
 			options.cert,
